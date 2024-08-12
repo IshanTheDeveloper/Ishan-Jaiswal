@@ -19,7 +19,7 @@ Navigation bar styling
 */
 .navbar {
   display: inline-flex;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100vw;
   background-color: rgb(54, 69, 79);
   box-shadow: 0 10px 10px rgb(0, 0, 0, 0.3);
@@ -61,6 +61,36 @@ Home page part styling
 
 
 */
+.toggle-button {
+  display: inline-block;
+  margin-top: 15vh;
+  position: fixed;
+}
+.toggle-content {
+  display: inline-block;
+  width: 5vw;
+  height: 10vh;
+  background-color: rgb(255, 255, 255, 0.2);
+  box-shadow: 0 0 2px 2px aqua;
+  border-radius: 5rem;
+  margin-left: 1vw;
+}
+.toggle-content:hover {
+  box-shadow: 0 0 5px 5px aqua;
+}
+.toggle-text {
+  display: block;
+  font-size: 1vw;
+  font-weight: 300;
+  color: white;
+  margin-left: 1.5vw;
+  margin-top: 1vh;
+}
+.toggle-icon {
+  color: yellow;
+  font-size: 2vw;
+  margin-left: 1.3vw;
+}
 #home-page {
   display: flex;
   font-weight: 400;
@@ -68,15 +98,14 @@ Home page part styling
 }
 .introduction {
   display: inline-block;
-  margin-top: 5vw;
   width: 50vw;
-  height: 80vh;
+  height: 100vh;
+  margin-top: 25vh;
 }
 
 .heading-name {
   display: flex;
   color: white;
-  margin-top: 20vh;
   font-size: 3.6vw;
 }
 .job-role {
@@ -90,8 +119,8 @@ Home page part styling
   justify-content: center;
   align-items: center;
   width: 45vw;
-  height: 80vh;
-  margin-top: 20vh;
+  height: 100vh;
+  margin-top: 4vh;
 }
 
 .short-intro {
@@ -893,13 +922,392 @@ Contact page styling part
   padding: 0.1rem;
   border-radius: 0.5rem;
 }
-span {
-  margin-left: 10vw;
-  margin-top: 4vh;
+@media (max-width: 769px) {
+  body {
+    overflow-x: hidden;
+  }
+  .navbar {
+    width: 100%;
+    overflow: hidden;
+  }
+  .nav-items {
+    width: 40vw;
+    margin-left: 0;
+    margin-top: 2vh;
+  }
+  .nav-items a {
+    font-size: 1.5vw;
+  }
+  .name-logo {
+    margin-left: 0;
+    margin-top: 2vh;
+  }
+  .name-logo {
+    width: 30vw;
+  }
+  #home-page {
+    display: inline-block;
+    width: auto;
+  }
+  .toggle-button {
+    margin-top: 9vh;
+  }
+  .toggle-content {
+    width: 12vw;
+    height: 9vh;
+  }
+  .toggle-text {
+    font-size: 2.5vw;
+    margin-left: 3vw;
+    margin-bottom: 0.8vh;
+  }
+  .toggle-icon {
+    font-size: 4vw;
+    margin-left: 3.2vw;
+  }
+  .profile-photo {
+    display: grid;
+    text-align: center;
+    margin-top: 9vh;
+    width: 100vw;
+    height: 20vh;
+  }
+  .introduction {
+    display: inline-block;
+    width: 100vw;
+    height: 70vh;
+    margin-top: 5vh;
+  }
+  .heading-name {
+    margin-top: 2.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    font-size: 6vw;
+    font-weight: 900;
+  }
+  .job-role {
+    margin-top: 2vh;
+    text-align: center;
+    width: 100vw;
+    font-size: 4.5vw;
+    font-weight: 900;
+  }
+  .short-intro {
+    font-weight: 100;
+    text-align: center;
+    width: 100vw;
+    font-size: 3.5vw;
+  }
+  .skill-logo {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3vh;
+    width: 100vw;
+  }
+  #java,
+  #html,
+  #css,
+  #js,
+  #react {
+    font-size: 6vw;
+    margin-bottom: 0;
+  }
+  .resume {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 7vh;
+  }
+  .resume button {
+    font-size: 3vw;
+  }
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    width: 20vw;
+    margin-top: 5vh;
+    margin-left: 2vw;
+  }
+  #github,
+  #linkedin,
+  #twitter,
+  #instagram {
+    font-size: 4vw;
+    opacity: 70%;
+  }
+
+  #about-page {
+    display: inline-block;
+    margin-top: 3vh;
+  }
+  .about-image {
+    display: grid;
+    text-align: center;
+    margin-top: 6vh;
+    width: 100vw;
+    height: 45vh;
+  }
+  #aboutImage {
+    max-width: 100%;
+    height: auto;
+    width: 50vw;
+  }
+  .about-content {
+    display: inline-block;
+    width: 100%;
+    height: 50vh;
+    margin-top: 0;
+  }
+  .about-heading {
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  .heading1 {
+    font-size: 6vw;
+  }
+  .heading2 {
+    font-size: 6vw;
+  }
+  .about-text {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    font-size: 2.8vw;
+  }
+  .about-description {
+    text-align: center;
+    width: 100vw;
+    font-size: 3vw;
+  }
+  .about-button {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  #read-more {
+    font-size: 3vw;
+    width: 20vw;
+  }
+  .skill-heading {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 10vh;
+  }
+  .container-area {
+    margin-top: 6vh;
+  }
+  .container {
+    margin-top: 6vh;
+  }
+  .project-heading {
+    margin-top: 8vh;
+  }
+  .project {
+    width: 20vw;
+    height: 20vh;
+    margin-top: 2vh;
+  }
+  .project h2 {
+    margin-top: 1vh;
+  }
+  #counter,
+  #bill,
+  #calculator,
+  #file,
+  #star {
+    margin-top: 4vh;
+  }
+  .service-heading {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  .service-content {
+    display: inline-block;
+    justify-content: center;
+    margin-top: 0;
+    width: 100vw;
+  }
+  .web-development {
+    width: 90vw;
+    margin-left: 4vw;
+    height: 23vh;
+  }
+  .app-development {
+    width: 90vw;
+    margin-left: 4vw;
+    height: 23vh;
+    margin-top: 0;
+  }
+  .database {
+    width: 90vw;
+    margin-left: 4vw;
+    height: 23vh;
+  }
+  .web-development i,
+  .app-development i,
+  .database i {
+    margin-top: 5vh;
+    padding: 0.5rem;
+  }
+  .web-development h2,
+  .app-development h2,
+  .database h2 {
+    margin-top: 0;
+  }
+  .web-development p,
+  .app-development p,
+  .database p {
+    margin-top: 0;
+    font-size: 2.2vw;
+  }
+  .web-development a,
+  .app-development a,
+  .database a {
+    margin-top: 2vh;
+  }
+  .certification-heading {
+    margin-top: 7vh;
+  }
+  .certificates {
+    height: 85vh;
+  }
+  .certificates1 {
+    width: 100vw;
+  }
+  .icissi,
+  .internshala,
+  .highschool,
+  .intermediate {
+    width: 40vw;
+  }
+  .certificates1 h1 {
+    font-size: 5vw;
+  }
+  .certificates1 p {
+    font-size: 3vw;
+  }
+  .certificates1 a {
+    font-size: 4vw;
+  }
+  .internshala a {
+    margin-top: 6vh;
+  }
+  #contacts {
+    height: 80vh;
+  }
+  .contact-heading {
+    margin-top: 10vh;
+  }
+  .contact-main-content {
+    height: 50vh;
+    margin-top: 10vh;
+  }
+  .contact-content {
+    width: 80vw;
+  }
+  .contact-content input {
+    width: 70vw;
+    height: 5vh;
+    font-size: 2vw;
+  }
+  .contact-content textarea {
+    width: 70vw;
+    font-size: 2vw;
+  }
+  .contact-content button {
+    font-size: 3vw;
+  }
+  .contact-footer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+  }
+  #whatsapp,
+  #mail,
+  #phone {
+    font-size: 5vw;
+  }
+  #whatsapp {
+    color: darkgreen;
+  }
+  #mail {
+    color: rgb(5, 75, 75);
+  }
+  #phone {
+    color: navy;
+  }
 }
-.mode-change i {
-  color: white;
-  border-radius: 1.8rem;
-  font-size: 3vw;
-  cursor: pointer;
+@media (max-width: 413px) {
+  .navbar {
+    position: fixed;
+  }
+  .toggle-content {
+    width: 14vw;
+    height: 6vh;
+  }
+  .toggle-text {
+    margin-left: 4vw;
+  }
+  .toggle-icon {
+    margin-left: 4.5vw;
+  }
+  #profile-image {
+    height: 25vh;
+    width: 50vw;
+  }
+  .short-intro {
+    width: 90vw;
+    margin-left: 2vw;
+  }
+  .social-links {
+    margin-top: 10vh;
+  }
+  .about-description {
+    width: 90vw;
+    margin-left: 2vw;
+    margin-bottom: 7vh;
+  }
+  .project {
+    width: 80vw;
+  }
+  .service-content {
+    width: 10vw;
+  }
+  .web-development,
+  .app-development,
+  .database {
+    width: 80vw;
+    height: 25vh;
+    margin-left: 7vw;
+  }
+  .certificates1 {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .icissi,
+  .internshala,
+  .highschool,
+  .intermediate {
+    height: 20vh;
+    width: 80vw;
+    margin-left: 7vw;
+    margin-top: 7vh;
+  }
+  #contacts {
+    margin-top: 15vh;
+  }
+  .contact-content input,
+  .contact-content textarea {
+    font-size: 3vw;
+    text-align: center;
+  }
 }
